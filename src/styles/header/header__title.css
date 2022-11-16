@@ -1,0 +1,9 @@
+.header__title {
+    color: #009F6B;
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: 54.5px;
+    line-height: 66px;
+    letter-spacing: 5%;
+    margin: 25px 0 23px 0;
+}
