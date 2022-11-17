@@ -1,0 +1,9 @@
+.form__fast-auth-container {
+    width: calc(100% - 110px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 55px 0;
+}

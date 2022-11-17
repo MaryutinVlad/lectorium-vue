@@ -1,0 +1,20 @@
+.header__curve-top {
+    width: 124px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 12px;
+    transform: skewX(-27deg);
+    border-radius: 20px 0 20px 0;
+    transition-property: border-top border-left;
+    transition-duration: .3s;
+    border-top: 1px solid #DCDCDC;
+    border-left: 1px solid #DCDCDC;
+}
+
+.header__curve-top:hover {
+    border-top: 1px solid #E81919;
+    border-left: 1px solid #E81919;
+    transition-property: border-top border-left;
+    transition-duration: .3s;
+}

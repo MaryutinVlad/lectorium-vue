@@ -1,0 +1,16 @@
+.navigation__link {
+    font-family: 'Inter';
+    font-size: 24px;
+    line-height: 29.05px;
+    font-weight: 100;
+    margin: 16px 150px 0 0;
+    letter-spacing: 0.1em;
+    color: #2A3439;
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+    text-underline-offset: 3px;
+}
+
+.navigation__link:last-child {
+    margin: 16px 0 0 0;
+}

@@ -1,0 +1,21 @@
+.form__input-field {
+    width: calc(100% - 110px);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(165, 157, 157, .5);
+    margin: 58px auto 0;
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: .2em;
+    color: #2A4050;
+    outline-style: none;
+}
+
+.form__input-field::placeholder {
+    font-style: italic;
+    padding-left: 30px;
+    color: #A59D9D;
+}

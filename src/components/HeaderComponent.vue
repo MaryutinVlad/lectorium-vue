@@ -5,21 +5,22 @@
 		</h1>
 		<div>
 			<button class="header__button">
-				<img src="../images/sign_in_button.png" alt="">
+				{{signIn.text}}
+				<div class="header__curve-bottom"></div>
 			</button>
 			<button class="header__button">
 				{{signUp.text}}
+				<div class="header__curve-top"></div>
 			</button>
 			<button class="header__button">
 				{{info.text}}
+				<div class="header__curve-top header__curve-bottom"></div>
 			</button>
 		</div>
 	</header>
 </template>
 
 <script>
-
-
   export default {
 	name: 'HeaderComponent',
 	data() {
@@ -43,4 +44,6 @@
   @import url('../styles/header/header.css');
   @import url('../styles/header/header__title.css');
   @import url('../styles/header/header__button.css');
+  @import url('../styles/header/header__curve-bottom.css');
+  @import url('../styles/header/header__curve-top.css');
 </style>
