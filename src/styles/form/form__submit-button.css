@@ -1,6 +1,5 @@
 .form__submit-button {
-    width: calc(100% - 110px);
-    margin: auto;
+    width: 100%;
     font-family: 'Inter';
     font-style: normal;
     font-size: 33px;

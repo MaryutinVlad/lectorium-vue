@@ -1,0 +1,9 @@
+.form__input-field-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px 0; 
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 0 0;
+}

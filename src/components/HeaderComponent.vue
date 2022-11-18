@@ -1,49 +1,48 @@
 <template>
 	<header class="header">
 		<h1 class="header__title">
-			{{title}}
+			Lectorium
 		</h1>
 		<div>
-			<button class="header__button">
-				{{signIn.text}}
-				<div class="header__curve-bottom"></div>
-			</button>
-			<button class="header__button">
-				{{signUp.text}}
-				<div class="header__curve-top"></div>
-			</button>
-			<button class="header__button">
-				{{info.text}}
-				<div class="header__curve-top header__curve-bottom"></div>
-			</button>
+			<HeaderButton
+        v-for="button in buttons"
+				:key="button.title"
+				:data="button"
+			/>
 		</div>
 	</header>
 </template>
 
 <script>
+  import HeaderButton from './HeaderButton'
+
   export default {
-	name: 'HeaderComponent',
-	data() {
-		return {
-			title: 'Lectorium',
-			signIn: {
-				text: 'sign in'
-			},
-			signUp: {
-				text: 'sign up'
-			},
-			info: {
-				text: 'info'
+		name: 'HeaderComponent',
+		components: {
+      HeaderButton,
+    },
+		data() {
+			return {
+				buttons: [
+					{
+						title: 'sign in',
+						classList: 'header__curve-top'
+					},
+					{
+						title: 'sign up',
+						classList: 'header__curve-bottom'
+					},
+					{
+						title: 'info',
+						classList: 'header__curve-top header__curve-bottom'
+					}
+				]
 			}
 		}
-	}
   }
 </script>
 
 <style scoped>
   @import url('../styles/header/header.css');
   @import url('../styles/header/header__title.css');
-  @import url('../styles/header/header__button.css');
-  @import url('../styles/header/header__curve-bottom.css');
-  @import url('../styles/header/header__curve-top.css');
 </style>
