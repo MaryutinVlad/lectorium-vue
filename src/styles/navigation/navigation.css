@@ -3,5 +3,6 @@
     flex-direction: row;
     width: 95%;
     justify-content: center;
+    gap: 0 97px;
     margin: 0 auto;
 }

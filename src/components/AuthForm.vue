@@ -1,5 +1,8 @@
 <template>
-  <div class="overlay">
+  <div
+    class="overlay"
+    @click="$emit('hide-form', data.access)"
+    >
     <form
       class="form"
 			action="#"
@@ -41,10 +44,10 @@
 
 <script>
   export default {
-	name: 'AuthForm',
+    name: 'AuthForm',
     props: {
-        data: Object,
-				services: Array
+      data: Object,
+			services: Array
     }
   }
 </script>

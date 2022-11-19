@@ -1,5 +1,8 @@
 <template>
-  <button class="header__button" @click="toggleSignInForm">
+  <button
+    class="header__button"
+    @click="$emit('show-form', data.access)"
+  >
 		{{data.title}}
 		<div :class="data.classList"></div>
 	</button>

@@ -1,18 +1,19 @@
 <template>
-  <div class="page" @keyup="closeFormOnKey" @click="closeFormOnClick">
+  <div class="page">
     <AuthForm
+      @hide-form="hideForm"
       :data="auth.signIn"
       :services="auth.services"
-      v-show="signInIsShown"
+      v-show="auth.signIn.isShown"
     />
     <AuthForm
+      @hide-form="hideForm"
       :data="auth.signUp"
       :services="auth.services"
-      v-show="signUpIsShown"
+      v-show="auth.signUp.isShown"
     />
     <HeaderComponent
-      @toggle-sign-in-form="toggleSignInForm"
-      @toggle-sign-up-form="toggleSignUpForm"
+      @show-form="showForm"
       :text="auth.signIn.text"
     />
     <NavigationComponent />
@@ -33,8 +34,6 @@ export default {
   },
   data() {
     return {
-      signInIsShown: false,
-      signUpIsShown: false,
       auth: {
         services: [
           {
@@ -52,33 +51,25 @@ export default {
         ],
         signIn: {
           text: 'Sign In',
-          items: ['email', 'password']
+          access: 'signIn',
+          items: ['email', 'password'],
+          isShown: false
         },
         signUp: {
           text: 'Sign Up',
-          items: ['username', 'email', 'password']
+          access: 'signUp',
+          items: ['username', 'email', 'password'],
+          isShown: false
         }
       }
     }
   },
   methods: {
-    toggleSignInForm() {
-      this.signInIsShown = true
+    showForm(prop) {
+      this.auth[prop].isShown = true
     },
-    toggleSignUpForm() {
-      this.signUpIsShown = true
-    },
-    closeFormOnKey(e) {
-      if (e.key === 'Escape') {
-        this.signInIsShown = false;
-        this.signUpIsShown = false;
-      }
-    },
-    closeFormOnClick(e) {
-      if (e.target.classList.contains('overlay')) {
-        this.signInIsShown = false;
-        this.signUpIsShown = false;
-      }
+    hideForm(prop) {
+      this.auth[prop].isShown = false
     }
   }
 }

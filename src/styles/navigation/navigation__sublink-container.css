@@ -1,0 +1,4 @@
+.navigation__sublink-container {
+    display: flex;
+    flex-direction: column;
+}

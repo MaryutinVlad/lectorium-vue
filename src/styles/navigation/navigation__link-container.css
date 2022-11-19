@@ -1,0 +1,16 @@
+.navigation__link-container {
+    width: 190px;
+    max-height: 29px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 7px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.navigation__link-container:hover {
+    transition-property: max-height;
+    transition-duration: 3s;
+    background-color: #F5F5F5;
+    max-height: 1000px;
+}
