@@ -10,7 +10,8 @@
 
 .navigation__link-container:hover {
     transition-property: max-height;
-    transition-duration: 3s;
+    transition-duration: 1.5s;
     background-color: #F5F5F5;
     max-height: 1000px;
+    border-radius: 0 0 20px 20px;
 }

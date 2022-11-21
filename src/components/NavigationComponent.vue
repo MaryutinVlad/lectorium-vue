@@ -21,19 +21,19 @@
         links: [
           {
             title: 'classes',
-            subtitles: ['math', 'langs', 'writing', 'speed reading']
+            sublinks: ['math', 'langs', 'writing', 'speed reading']
           },
           {
             title: 'courses',
-            subtitles: ['full course', 'term course', 'short course']
+            sublinks: ['full course', 'term course', 'short course']
           },
           {
             title: 'lections',
-            subtitles: ['public', 'conversations', 'free conten', 'start lection']
+            sublinks: ['public', 'conversations', 'free conten', 'start lection']
           },
           {
             title: 'communities',
-            subtitles: ['featured', 'create', 'by themes', 'by country']
+            sublinks: ['featured', 'create', 'by themes', 'by country']
           }
         ]
       }

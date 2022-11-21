@@ -4,20 +4,24 @@
       {{data.title}}
     </a>
     <div class="navigation__sublink-container">
-			<a href="">aaaaa</a>
-			<a href="">aaaaa</a>
-			<a href="">aaaaa</a>
-			<a href="">aaaaa</a>
+			<NavigationLSublink
+        :sublinks="data.sublinks"
+      />
     </div>
 	</div>
 </template>
 
 <script>
+  import NavigationLSublink from './NavigationSublink'
+
   export default {
     name: 'NavigationLink',
 		props: {
 			data: Object
-		}
+		},
+    components: {
+      NavigationLSublink
+    }
   }
 </script>
 
