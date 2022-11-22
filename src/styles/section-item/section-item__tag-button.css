@@ -1,0 +1,14 @@
+.section-item__tag-button {
+    color: rgb(171, 97, 101);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.06em;
+    background-color: rgb(217, 217, 217);
+    border: 0;
+    border-radius: 15px;
+    padding: 3px 6px 4px;
+    cursor: pointer;
+}

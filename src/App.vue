@@ -17,22 +17,25 @@
       :text="auth.signIn.text"
     />
     <NavigationComponent />
+    <MainContent />
     <FooterComponent />
   </div>
 </template>
 
 <script>
+import AuthForm from './components/AuthForm.vue'
 import HeaderComponent from './components/HeaderComponent'
 import NavigationComponent from './components/NavigationComponent'
-import AuthForm from './components/AuthForm.vue'
+import MainContent from './components/MainContent'
 import FooterComponent from './components/FooterComponent'
 
 export default {
   name: 'App',
   components: {
+    AuthForm,
     HeaderComponent,
     NavigationComponent,
-    AuthForm,
+    MainContent,
     FooterComponent
   },
   data() {

@@ -1,0 +1,10 @@
+.section-item__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 27.84px;
+    letter-spacing: 0.06em;
+    text-indent: 10px;
+    margin: 10px auto 0;
+}

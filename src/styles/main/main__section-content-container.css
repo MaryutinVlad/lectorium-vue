@@ -1,0 +1,5 @@
+.main__section-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}

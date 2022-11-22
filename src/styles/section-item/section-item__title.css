@@ -1,0 +1,9 @@
+.section-item__title {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38.73px;
+    letter-spacing: 0.05em;
+    margin: 3px auto 0 10px;
+}
