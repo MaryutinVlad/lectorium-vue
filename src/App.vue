@@ -1,20 +1,25 @@
 <template>
   <div class="page">
     <AuthForm
-      @hide-form="hideForm"
-      :data="auth.signIn"
-      :services="auth.services"
-      v-show="auth.signIn.isShown"
+      @hide-form="hidePopup"
+      :data="signIn"
+      :services="services"
+      v-show="signIn.isShown"
     />
     <AuthForm
-      @hide-form="hideForm"
-      :data="auth.signUp"
-      :services="auth.services"
-      v-show="auth.signUp.isShown"
+      @hide-form="hidePopup"
+      :data="signUp"
+      :services="services"
+      v-show="signUp.isShown"
+    />
+    <SettingsComponent
+    @hide-settings="hidePopup"
+      :data="settings"
+      v-show="settings.isShown"
     />
     <HeaderComponent
-      @show-form="showForm"
-      :text="auth.signIn.text"
+      @show-form="showPopup"
+      :loggedIn="loggedIn"
     />
     <NavigationComponent />
     <MainContent />
@@ -24,6 +29,7 @@
 
 <script>
 import AuthForm from './components/AuthForm.vue'
+import SettingsComponent from './components/SettingsComponent'
 import HeaderComponent from './components/HeaderComponent'
 import NavigationComponent from './components/NavigationComponent'
 import MainContent from './components/MainContent'
@@ -33,6 +39,7 @@ export default {
   name: 'App',
   components: {
     AuthForm,
+    SettingsComponent,
     HeaderComponent,
     NavigationComponent,
     MainContent,
@@ -40,7 +47,7 @@ export default {
   },
   data() {
     return {
-      auth: {
+        loggedIn: true,
         services: [
           {
             title: 'Google',
@@ -56,39 +63,62 @@ export default {
           }
         ],
         signIn: {
-          text: 'Sign In',
+          title: 'Sign In',
           access: 'signIn',
           items: ['email', 'password'],
           isShown: false
         },
         signUp: {
-          text: 'Sign Up',
+          title: 'Sign Up',
           access: 'signUp',
           items: ['username', 'email', 'password'],
           isShown: false
+        },
+        settings: {
+          title: 'Settings',
+          access: 'settings',
+          isShown: false,
+          items: [
+            {
+              title: 'Color mode',
+              type: 'button'
+            },
+            {
+              title: 'Allow notifications',
+              type: 'button'
+            },
+            {
+              title: 'Enable Cookies',
+              type: 'button'
+            },
+            {
+              title: 'Text size',
+              type: 'number'
+            }
+          ]
         }
-      }
+      
     }
   },
   methods: {
-    showForm(prop) {
-      this.auth[prop].isShown = true
+    showPopup(prop) {
+      this[prop].isShown = true
     },
-    hideForm(prop) {
-      this.auth[prop].isShown = false
+    hidePopup(prop, result) {
+      this[prop].isShown = result
     }
   }
 }
 </script>
 
 <style>
-@import url('./fonts/fonts.css');
+  @import url('./fonts/fonts.css');
 
-.page {
-  display: flex;
-  flex-direction: column;
-  margin: 0 25px;
-  padding: 0;
-  background-color: #FEFEFA;
-}
+  .page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+    padding: 0;
+    background-color: #FEFEFA;
+  }
 </style>

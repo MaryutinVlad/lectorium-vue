@@ -1,14 +1,14 @@
 <template>
   <div
     class="overlay"
-    @click="$emit('hide-form', data.access)"
+    @click="onClick"
     >
     <form
       class="form"
 			action="#"
 		>
       <h2 class="form__title">
-        {{data.text}}
+        {{data.title}}
       </h2>
       <div class="form__input-field-container">
         <input
@@ -36,7 +36,7 @@
         <input
           class="form__submit-button"
 					type="submit"
-					:value="data.text.toLowerCase()"
+					:value="data.title.toLowerCase()"
 				>
     </form>
   </div>
@@ -47,7 +47,15 @@
     name: 'AuthForm',
     props: {
       data: Object,
-			services: Array
+			services: Array,
+    },
+    emits: [
+      'hide-form'
+    ],
+    methods: {
+      onClick(e) {
+        this.$emit('hide-form', this.data.access, e.target !== e.currentTarget)
+      }
     }
   }
 </script>

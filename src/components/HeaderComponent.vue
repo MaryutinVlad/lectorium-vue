@@ -6,7 +6,7 @@
 		<div>
 			<HeaderButton
         @show-form="showForm"
-        v-for="button in buttons"
+        v-for="button in (loggedIn ? logged : unlogged)"
 				:key="button.title"
 				:data="button"
 			/>
@@ -22,6 +22,9 @@
 		components: {
       HeaderButton,
     },
+		props: {
+			loggedIn: Boolean
+		},
 		methods: {
 			showForm(data) {
 				this.$emit('show-form', data)
@@ -32,7 +35,7 @@
 		],
 		data() {
 			return {
-				buttons: [
+				unlogged: [
 					{
 						title: 'sign in',
 						access: 'signIn',
@@ -46,6 +49,23 @@
 					{
 						title: 'info',
 						access: 'info',
+						classList: 'header__curve-top header__curve-bottom'
+					}
+				],
+				logged: [
+          {
+						title: 'user',
+						access: 'user',
+						classList: 'header__curve-top'
+					},
+					{
+						title: 'settings',
+						access: 'settings',
+						classList: 'header__curve-bottom'
+					},
+					{
+						title: 'log out',
+						access: 'logout',
 						classList: 'header__curve-top header__curve-bottom'
 					}
 				]

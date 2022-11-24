@@ -1,0 +1,10 @@
+.settings__upper-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+  margin: 35px auto 60px;
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 31px;
+  letter-spacing: .05em;
+}

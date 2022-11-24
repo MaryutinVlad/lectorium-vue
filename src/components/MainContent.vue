@@ -25,21 +25,21 @@
 							{
 								id: 1,
 								title: 'Test article title',
-								src: 'test1.jpg',
+								src: 'test1.png',
 								text: 'A short description. Two lines max...',
 								tag: 'writing'
 							},
 							{
 								id: 2,
 								title: 'Test article title',
-								src: 'test2.jpg',
+								src: 'test2.png',
 								text: 'A short description. Two lines max...',
 								tag: 'math'
 							},
 							{
 								id: 3,
 								title: 'Test article title',
-								src: 'test3.jpg',
+								src: 'test3.png',
 								text: 'A short description. Two lines max...',
 								tag: 'tribalart'
 							}
@@ -51,21 +51,21 @@
               {
 								id: 4,
 								title: 'Test article title',
-								src: 'test4.jpg',
+								src: 'test4.png',
 								text: 'A short description. Two lines max...',
 								tag: 'security'
 							},
 							{
 								id: 5,
 								title: 'Test article title',
-								src: 'test5.jpg',
+								src: 'test5.png',
 								text: 'A short description. Two lines max...',
 								tag: 'planning'
 							},
 							{
 								id: 6,
 								title: 'Test article title',
-								src: 'test6.jpg',
+								src: 'test6.png',
 								text: 'A short description. Two lines max...',
 								tag: 'music'
 							}
@@ -77,21 +77,21 @@
               {
 								id: 7,
 								title: 'Test article title',
-								src: 'test7.jpg',
+								src: 'test7.png',
 								text: 'A short description. Two lines max...',
 								tag: 'healthcare'
 							},
 							{
 								id: 8,
 								title: 'Test article title',
-								src: 'test8.jpg',
+								src: 'test8.png',
 								text: 'A short description. Two lines max...',
 								tag: 'security'
 							},
 							{
 								id: 9,
 								title: 'Test article title',
-								src: 'test9.jpg',
+								src: 'test9.png',
 								text: 'A short description. Two lines max...',
 								tag: 'willpower'
 							}

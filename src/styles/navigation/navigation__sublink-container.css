@@ -1,6 +1,16 @@
 .navigation__sublink-container {
+    width: 100%;
+    gap: 6px 0;
+    display: none;
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    padding: 5px 0 15px;
+    background-color: rgba(245, 245, 245, .9);
+    border-radius: 0 0 10px 10px;
+}
+
+.navigation__link-container:hover .navigation__sublink-container {
     display: flex;
     flex-direction: column;
-    gap: 6px 0;
-    margin: 5px 0 13px 0;
 }
