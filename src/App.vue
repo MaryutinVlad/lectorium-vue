@@ -79,6 +79,12 @@ export default {
           items: ['username', 'email', 'password'],
           isShown: false
         },
+        info: {
+          title: 'Info',
+          access: 'info',
+          items: ['about', 'test'],
+          isShown: false
+        },
         settings: {
           title: 'Settings',
           access: 'settings',
