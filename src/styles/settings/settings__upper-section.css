@@ -1,8 +1,9 @@
 .settings__upper-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px 0;
-  margin: 35px auto 60px;
+  gap: 20px 0;
+  margin: 30px auto 50px;
   font-size: 26px;
   font-weight: 200;
   line-height: 31px;

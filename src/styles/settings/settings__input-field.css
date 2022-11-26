@@ -1,0 +1,16 @@
+.settings__input-field {
+  box-sizing: border-box;
+  padding: 0 1px;
+  border: 1px solid #8B8282;
+  border-radius: 90px;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.settings__input-field:hover {
+  background-color: #FEFEFA;
+}

@@ -15,7 +15,9 @@
         />
       </div>
       <div class="settings__lower-section">
-        
+        <EditorComponent
+          :data="data.lowerSection"
+        />
       </div>
     </div>
   </div>
@@ -23,6 +25,7 @@
 
 <script>
   import SettingsItem from './SettingsItem'
+  import EditorComponent from './EditorComponent'
 
   export default {
     name: 'SettingsComponent',
@@ -30,7 +33,8 @@
       data: Object
     },
     components: {
-      SettingsItem
+      SettingsItem,
+      EditorComponent
     },
     emits: [
       'hide-settings'
@@ -47,4 +51,5 @@
   @import url('../styles/settings/settings.css');
   @import url('../styles/settings/settings__title.css');
   @import url('../styles/settings/settings__upper-section.css');
+  @import url('../styles/settings/settings__lower-section.css');
 </style>

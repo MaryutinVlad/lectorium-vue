@@ -1,5 +1,5 @@
 .settings__switch-bar {
-  width: 100px;
+  width: 70px;
+  border: 1px solid #3A3737;
   border-radius: 90px;
-  border-color: #3A3737;
 }

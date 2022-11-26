@@ -55,7 +55,7 @@
 				logged: [
           {
 						title: 'user',
-						access: 'user',
+						access: 'userSettings',
 						classList: 'header__curve-top'
 					},
 					{
