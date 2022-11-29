@@ -5,7 +5,7 @@
 		</h1>
 		<div>
 			<HeaderButton
-        @show-form="(loggedIn ? showInfo : showForm)"
+        @show-form="(showForm)"
         v-for="button in (loggedIn ? logged : unlogged)"
 				:key="button.title"
 				:data="button"
@@ -70,7 +70,7 @@
 					}
 				]
 			}
-		}
+		},
   }
 </script>
 
