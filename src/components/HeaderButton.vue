@@ -1,7 +1,7 @@
 <template>
   <button
     class="header__button"
-    @click="$emit('show-form', data.access)"
+    @click="onClick"
   >
 		{{data.title}}
 		<div :class="data.classList"></div>
@@ -13,7 +13,13 @@
     name: 'HeaderButton',
 		props: {
 			data: Object
-		}
+		},
+    methods: {
+      onClick() {
+        console.log(this.$route.path)
+        this.$emit('show-form', this.data.access)
+      }
+    }
   }
 </script>
 

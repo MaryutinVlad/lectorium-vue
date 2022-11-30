@@ -1,8 +1,8 @@
 <template>
 	<div class="navigation__link-container">
-    <a class="navigation__link" href="#">
+    <router-link class="navigation__link" :to="data.route">
       {{data.title}}
-    </a>
+    </router-link>
     <div class="navigation__sublink-container">
 			<NavigationLSublink
         :sublinks="data.sublinks"

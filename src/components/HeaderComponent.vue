@@ -1,8 +1,11 @@
 <template>
 	<header class="header">
-		<h1 class="header__title">
+		<router-link
+      class="header__title"
+			to="/"
+		>
 			Lectorium
-		</h1>
+		</router-link>
 		<div>
 			<HeaderButton
         @show-form="(showForm)"

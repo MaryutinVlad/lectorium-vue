@@ -1,9 +1,7 @@
 .navigation__sublink {
-    font-family: 'Inter';
     font-size: 18px;
     font-weight: 200;
     line-height: 22.2px;
-    letter-spacing: .1em;
     text-decoration-thickness: .5px;
     text-underline-offset: 3px;
     box-sizing: border-box;

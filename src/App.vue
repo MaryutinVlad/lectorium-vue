@@ -27,7 +27,7 @@
       :loggedIn="loggedIn"
     />
     <NavigationComponent />
-    <MainContent />
+    <router-view></router-view>
     <FooterComponent />
   </div>
 </template>
@@ -37,7 +37,6 @@ import AuthForm from './components/AuthForm.vue'
 import SettingsComponent from './components/SettingsComponent'
 import HeaderComponent from './components/HeaderComponent'
 import NavigationComponent from './components/NavigationComponent'
-import MainContent from './components/MainContent'
 import FooterComponent from './components/FooterComponent'
 import initialData from './resources/resources'
 
@@ -48,7 +47,6 @@ export default {
     SettingsComponent,
     HeaderComponent,
     NavigationComponent,
-    MainContent,
     FooterComponent
   },
   methods: {
@@ -67,18 +65,14 @@ export default {
   },
   data() {
     return initialData
+  },
+  created() {
+    this.$data.loggedIn = false
   }
+
 }
 </script>
 
 <style>
-  @import url('./fonts/fonts.css');
-
-  .page {
-    display: flex;
-    flex-direction: column;
-    margin: 0 25px;
-    padding: 0;
-    background-color: #FEFEFA;
-  }
+  @import url('./styles/page/page.css');
 </style>

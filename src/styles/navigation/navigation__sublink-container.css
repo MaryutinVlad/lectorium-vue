@@ -1,16 +1,23 @@
 .navigation__sublink-container {
     width: 100%;
     gap: 6px 0;
-    display: none;
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    z-index: 1;
+    max-height: 0px;
+    overflow: hidden;
     left: 0;
     box-sizing: border-box;
-    padding: 5px 0 15px;
     background-color: rgba(245, 245, 245, .9);
     border-radius: 0 0 10px 10px;
+    transition-property: max-height padding;
+    transition-duration: .3s;
 }
 
 .navigation__link-container:hover .navigation__sublink-container {
-    display: flex;
-    flex-direction: column;
+    transition-property: max-height padding;
+    transition-duration: .7s;
+    max-height: 250px;
+    padding: 5px 0 15px;
 }

@@ -6,3 +6,9 @@
 	border-bottom: 2px solid #DCDCDC;
 	margin: 0 auto;
 }
+
+.header *{
+	user-select: none;
+	font-style: italic;
+	font-weight: 100;
+}

@@ -1,0 +1,9 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 25px;
+  background-color: #FEFEFA;
+  font-family: 'Inter';
+  color: #2A4050;
+}

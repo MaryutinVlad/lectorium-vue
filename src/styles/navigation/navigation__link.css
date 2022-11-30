@@ -1,10 +1,11 @@
 .navigation__link {
-    font-family: 'Inter';
+    position: relative;
+    z-index: 2;
     font-size: 24px;
     line-height: 29.05px;
     font-weight: 100;
-    letter-spacing: 0.1em;
     color: #2A3439;
     text-underline-offset: 4px;
     text-decoration-thickness: .5px;
+    background-color: #FEFEFA;
 }
