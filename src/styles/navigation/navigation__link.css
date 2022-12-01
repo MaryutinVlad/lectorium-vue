@@ -9,3 +9,7 @@
     text-decoration-thickness: .5px;
     background-color: #FEFEFA;
 }
+
+.navigation__link:hover {
+    background-color: rgba(245, 245, 245, .9);
+}

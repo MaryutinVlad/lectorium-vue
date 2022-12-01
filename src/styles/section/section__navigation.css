@@ -1,0 +1,7 @@
+.section__navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  box-sizing: border-box;
+  padding: 0 0 20px 20px;
+}
