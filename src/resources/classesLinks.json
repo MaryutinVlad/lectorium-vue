@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Math",
+    "to": "/math"
+  },
+  {
+    "title": "Planning",
+    "to": "/"
+  },
+  {
+    "title": "Healthcare",
+    "to": "/"
+  },
+  {
+    "title": "Writing",
+    "to": "/"
+  },
+  {
+    "title": "Security",
+    "to": "/"
+  },
+  {
+    "title": "Crafting",
+    "to": "/"
+  }
+]

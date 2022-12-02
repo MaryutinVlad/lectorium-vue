@@ -13,8 +13,8 @@
 }
 
 .header__curve-top:hover {
-    border-top: 1px solid #E81919;
-    border-left: 1px solid #E81919;
+    border-top: 1px solid #dc8181;
+    border-left: 1px solid #dc8181;
     transition-property: border-top border-left;
     transition-duration: .3s;
 }

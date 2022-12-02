@@ -5,4 +5,12 @@
   color: #38444a;
   letter-spacing: 0.02em;
   text-decoration: none;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  margin: 0 10px;
+  width:fit-content;
+}
+
+.section__navigation-link:hover {
+  background-color: #F5F5F5;
 }

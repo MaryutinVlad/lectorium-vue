@@ -20,7 +20,7 @@
 }
 
 .header__button:hover {
-    color: #009F6B;
+    color: #0fad79;
     transition-property: color;
     transition-duration: .3s;
 }

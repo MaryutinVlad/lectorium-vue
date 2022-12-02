@@ -1,11 +1,9 @@
 <template>
-	<main class="main">
     <ContentSection
       v-for="section of sections"
 			:key="section.title"
 			:data="section"
 		/>
-	</main>
 </template>
 
 <script>
@@ -104,5 +102,4 @@
 </script>
 
 <style scoped>
-  @import url('../styles/main/main.css');
 </style>

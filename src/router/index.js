@@ -9,27 +9,32 @@ import CommunitiesRoute from '../views/CommunitiesRoute'
 const routes = [
   {
     path: '/',
-    name: HomeRoute,
+    name: 'Home',
     component: HomeRoute
   },
   {
     path: '/classes',
-    name: ClassesRoute,
+    name: 'classes',
+    component: ClassesRoute
+  },
+  {
+    path: '/classes/:tag',
+    name: 'classTag',
     component: ClassesRoute
   },
   {
     path: '/courses',
-    name: CoursesRoute,
+    name: 'courses',
     component: CoursesRoute
   },
   {
     path: '/lections',
-    name: LectionsRoute,
+    name: 'lections',
     component: LectionsRoute
   },
   {
     path: '/communities',
-    name: CommunitiesRoute,
+    name: 'communities',
     component: CommunitiesRoute
   },
 ]

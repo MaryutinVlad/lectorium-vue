@@ -27,7 +27,10 @@
       :loggedIn="loggedIn"
     />
     <NavigationComponent />
-    <router-view></router-view>
+    <main class="main">
+      <router-view>
+      </router-view>
+    </main>
     <FooterComponent />
   </div>
 </template>
@@ -75,4 +78,5 @@ export default {
 
 <style>
   @import url('./styles/page/page.css');
+  @import url('./styles/main/main.css');
 </style>

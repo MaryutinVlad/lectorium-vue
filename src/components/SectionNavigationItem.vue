@@ -1,7 +1,7 @@
 <template>
   <router-link
     class="section__navigation-link"
-    :to="data.to"
+    :to="{ name: 'classTag', params: { tag: data.title.toLowerCase()}}"
   >
     {{data.title}}
   </router-link>  

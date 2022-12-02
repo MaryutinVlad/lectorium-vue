@@ -2,49 +2,29 @@
   <SectionComponent
     :title="title"
     :links="links"
-    :data="items"
+    :items="items"
   />
 </template>
 
 <script>
   import SectionComponent from '../components/SectionComponent'
-  import classesItems from '../resources/classesItems'
 
   export default {
     name: 'ClassesRoute',
     components: {
       SectionComponent
     },
+    created() {
+      console.log(this.$route.path.match(/[/]\w+/g));
+      if (this.$route.path === /[/]\w+[/]\w+/g) {
+        console.log('!!!!!')
+      }
+    },
     data() {
       return {
-        title: 'Classes',
-        items: classesItems,
-        links: [
-          {
-            title: 'Math',
-            to: '/'
-          },
-          {
-            title: 'Planning',
-            to: '/'
-          },
-          {
-            title: 'Healthcare',
-            to: '/'
-          },
-          {
-            title: 'Writing',
-            to: '/'
-          },
-          {
-            title: 'Security',
-            to: '/'
-          },
-          {
-            title: 'Crafting',
-            to: '/'
-          }
-        ]
+        title: this.$route.name,
+        items: require(`../resources${this.$route.path}Items.json`),
+        links: require(`../resources${this.$route.path}Links.json`)
       }
     }
   }

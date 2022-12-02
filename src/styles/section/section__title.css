@@ -1,8 +1,8 @@
 .section__title {
   color: #2A3439;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 32px;
   line-height: 39px;
   letter-spacing: 0.05em;
-  margin: 15px auto 15px 0px;
+  margin: 5px auto 15px 5px;
 }

@@ -8,14 +8,12 @@
         {{data.text}}
       </p>
     </div>
-    <div class="section__item-info-container">
-      <SectionItemInfo
-        :data="data.info"
-      />
-    </div>
+    <SectionItemInfo
+      :data="data.info"
+    />
     <img
       class="section__item-image"
-      :src="data.image"
+      :src="require(`@/images/` + data.image)"
       :alt="data.title"
     />
   </article>
@@ -40,6 +38,5 @@
   @import url('../styles/section/section__item-description.css');
   @import url('../styles/section/section__item-title.css');
   @import url('../styles/section/section__item-text.css');
-  @import url('../styles/section/section__item-info-container.css');
   @import url('../styles/section/section__item-image.css');
 </style>
