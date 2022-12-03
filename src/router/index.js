@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import HomeRoute from '../views/HomeRoute'
-import ClassesRoute from '../views/ClassesRoute'
-import CoursesRoute from '../views/CoursesRoute'
-import LectionsRoute from '../views/LectionsRoute'
-import CommunitiesRoute from '../views/CommunitiesRoute'
+import HomeRoute from '@/views/HomeRoute'
+import ClassesRoute from '@/views/ClassesRoute'
+import CoursesRoute from '@/views/CoursesRoute'
+import LectionsRoute from '@/views/LectionsRoute'
+import CommunitiesRoute from '@/views/CommunitiesRoute'
 
 const routes = [
   {

@@ -2,12 +2,14 @@
   <div class="page">
     <AuthForm
       @hide-form="hidePopup"
+      @auth-user="auth"
       :data="signIn"
       :services="services"
       v-show="signIn.isShown"
     />
     <AuthForm
       @hide-form="hidePopup"
+      @auth-user="auth"
       :data="signUp"
       :services="services"
       v-show="signUp.isShown"
@@ -41,7 +43,7 @@ import SettingsComponent from './components/SettingsComponent'
 import HeaderComponent from './components/HeaderComponent'
 import NavigationComponent from './components/NavigationComponent'
 import FooterComponent from './components/FooterComponent'
-import initialData from './resources/resources'
+import initialData from './resources/initialData'
 
 export default {
   name: 'App',
@@ -64,6 +66,13 @@ export default {
       const data = await res.json()
 
       return data
+    },
+    async auth(values) {
+      if (!values.username) {
+        console.log('sign in')
+      } else {
+        console.log('sign up')
+      }
     }
   },
   data() {

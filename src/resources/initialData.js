@@ -23,7 +23,7 @@ const initialData = {
   signUp: {
     title: 'Sign Up',
     access: 'signUp',
-    items: ['username', 'email', 'password'],
+    items: ['email', 'password', 'username'],
     isShown: false
   },
   info: {

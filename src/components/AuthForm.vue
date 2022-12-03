@@ -6,6 +6,8 @@
     <form
       class="form"
 			action="#"
+      @submit.prevent="submitForm"
+      novalidate
 		>
       <h2 class="form__title">
         {{data.title}}
@@ -17,6 +19,7 @@
 					:key="item"
 					:type="item"
 					:placeholder="item"
+          v-model="values[item]"
 				>
       </div>
         <div class="form__fast-auth-container">
@@ -50,11 +53,24 @@
 			services: Array,
     },
     emits: [
-      'hide-form'
+      'hide-form',
+      'auth-user'
     ],
     methods: {
       onClick(e) {
         this.$emit('hide-form', this.data.access, e.target !== e.currentTarget)
+      },
+      submitForm() {
+        this.$emit('auth-user', this.values)
+      }
+    },
+    data() {
+      return {
+        values: {
+          email: '',
+          password: '',
+          username: ''
+        }
       }
     }
   }
