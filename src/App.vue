@@ -38,12 +38,14 @@
 </template>
 
 <script>
-import AuthForm from './components/AuthForm.vue'
-import SettingsComponent from './components/SettingsComponent'
-import HeaderComponent from './components/HeaderComponent'
-import NavigationComponent from './components/NavigationComponent'
-import FooterComponent from './components/FooterComponent'
-import initialData from './resources/initialData'
+import { apiAuth } from './helpers/apiAuth'
+//import authStore from '@/stores/index'
+import AuthForm from '@/components/AuthForm.vue'
+import SettingsComponent from '@/components/SettingsComponent'
+import HeaderComponent from '@/components/HeaderComponent'
+import NavigationComponent from '@/components/NavigationComponent'
+import FooterComponent from '@/components/FooterComponent'
+import initialData from '@/resources/initialData'
 
 export default {
   name: 'App',
@@ -70,8 +72,16 @@ export default {
     async auth(values) {
       if (!values.username) {
         console.log('sign in')
+        const { data } = await apiAuth.signIn(values)
+        localStorage.setItem('lectorium-jwt', data.token)
+
       } else {
         console.log('sign up')
+        const { data } = await apiAuth.signUp(values)
+        
+        if (data) {
+          this.$data.signUp.title = 'signed up'
+        }
       }
     }
   },

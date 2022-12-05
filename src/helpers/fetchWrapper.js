@@ -1,4 +1,4 @@
-import { useAuthStore } from "@/resources/stores"
+import { useAuthStore } from "@/stores"
 
 export const fetchWrapper = {
   get: request('GET'),

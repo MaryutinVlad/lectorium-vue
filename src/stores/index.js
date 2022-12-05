@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
-import { fetchWrapper } from '@/helpers'
+//import { defineStore } from 'pinia'
+/*import { fetchWrapper } from '@/helpers/fetchWrapper'
 import { router } from 'json-server'
 //import { router } from '@/router/'
 //change later baseUel to imported from env value
@@ -12,13 +12,16 @@ export const useAuthStore = defineStore({
     returnUrl: null
   }),
   actions: {
-    async login(username, password) {
-      const user = await fetchWrapper.post(`${baseUrl}/login`, { username, password })
+    async signIn(values) {
+      const user = await fetchWrapper.post(`${baseUrl}/login`, values)
 
       this.user = user
       localStorage.setItem('user', JSON.stringify(user))
 
       router.push(this.returnUrl || '/')
+    },
+    async signUp(values) {
+      console.log('!!!!!!!!!!!!!!!!!!!!', values)
     },
     logout() {
       this.user = null
@@ -26,4 +29,4 @@ export const useAuthStore = defineStore({
       router.push('/login')
     }
   }
-})
+})*/
