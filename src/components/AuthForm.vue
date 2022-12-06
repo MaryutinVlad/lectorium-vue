@@ -46,11 +46,12 @@
 </template>
 
 <script>
+  import { apiAuth } from '@/helpers/apiAuth'
+
   export default {
     name: 'AuthForm',
     props: {
       data: Object,
-			services: Array,
     },
     emits: [
       'hide-form',
@@ -60,8 +61,17 @@
       onClick(e) {
         this.$emit('hide-form', this.data.access, e.target !== e.currentTarget)
       },
-      submitForm() {
-        this.$emit('auth-user', this.values)
+      async submitForm() {
+        if (!this.values.username) {
+        console.log('sign in')
+        const { data } = await apiAuth.signIn(this.values)
+        localStorage.setItem('lectorium-jwt', data.token)
+        this.loggedIn = true;
+      } else {
+        console.log('sign up')
+        const { data } = await apiAuth.signUp(this.values)
+        console.log(data)
+      }
       }
     },
     data() {
@@ -70,7 +80,21 @@
           email: '',
           password: '',
           username: ''
-        }
+        },
+        services: [
+          {
+            title: 'Google',
+            src: 'Google_Authenticator_for_Android_icon.svg'
+          },
+          {
+            title: 'Apple',
+            src: 'apple-social-logo-outline_icon-icons.com_74064.svg'
+          },
+          {
+            title: 'Facebook',
+            src: 'fb_icon-icons.com_65434.svg'
+          }
+        ],
       }
     }
   }

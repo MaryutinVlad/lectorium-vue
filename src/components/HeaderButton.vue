@@ -16,7 +16,6 @@
 		},
     methods: {
       onClick() {
-        console.log(this.$route.path)
         this.$emit('show-form', this.data.access)
       }
     }

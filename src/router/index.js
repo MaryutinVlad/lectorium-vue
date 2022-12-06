@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeRoute from '@/views/HomeRoute'
+import AuthRoute from '@/views/AuthRoute'
 import ClassesRoute from '@/views/ClassesRoute'
 import CoursesRoute from '@/views/CoursesRoute'
 import LectionsRoute from '@/views/LectionsRoute'
@@ -11,6 +12,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: HomeRoute
+  },
+  {
+    path: '/auth/:option',
+    name: 'Auth',
+    component: AuthRoute
   },
   {
     path: '/classes',

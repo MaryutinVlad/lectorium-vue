@@ -1,37 +1,18 @@
 const initialData = {
   loggedIn: true,
-  services: [
-    {
-      title: 'Google',
-      src: 'Google_Authenticator_for_Android_icon.svg'
-    },
-    {
-      title: 'Apple',
-      src: 'apple-social-logo-outline_icon-icons.com_74064.svg'
-    },
-    {
-      title: 'Facebook',
-      src: 'fb_icon-icons.com_65434.svg'
-    }
-  ],
-  signIn: {
-    title: 'Sign In',
-    access: 'signIn',
-    items: ['email', 'password'],
-    isShown: false
-  },
-  signUp: {
-    title: 'Sign Up',
-    access: 'signUp',
-    items: ['email', 'password', 'username'],
-    isShown: false
-  },
   info: {
     title: 'Info',
     access: 'info',
     items: ['about', 'test'],
     isShown: false
   },
+  confirm: {
+    title: 'Log out',
+    access: 'confirm',
+    description: 'Please confirm logout action. Validation data will be removed on confirmation.',
+    isShown: false
+  }
+  ,
   settings: {
     title: 'Settings',
     access: 'settings',

@@ -8,7 +8,7 @@
 		</router-link>
 		<div>
 			<HeaderButton
-        @show-form="(showForm)"
+        @show-form="showForm"
         v-for="button in (loggedIn ? logged : unlogged)"
 				:key="button.title"
 				:data="button"
@@ -68,7 +68,7 @@
 					},
 					{
 						title: 'log out',
-						access: 'logout',
+						access: 'confirm',
 						classList: 'header__curve-top header__curve-bottom'
 					}
 				]

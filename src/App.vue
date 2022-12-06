@@ -1,18 +1,10 @@
 <template>
   <div class="page">
-    <AuthForm
-      @hide-form="hidePopup"
-      @auth-user="auth"
-      :data="signIn"
-      :services="services"
-      v-show="signIn.isShown"
-    />
-    <AuthForm
-      @hide-form="hidePopup"
-      @auth-user="auth"
-      :data="signUp"
-      :services="services"
-      v-show="signUp.isShown"
+    <ConfirmationComponent
+      @confirm-action="handleConfirm"
+      @hide-popup="hidePopup"
+      v-show="confirm.isShown"
+      :data="confirm"
     />
     <SettingsComponent
       @hide-settings="hidePopup"
@@ -38,23 +30,32 @@
 </template>
 
 <script>
-import { apiAuth } from './helpers/apiAuth'
-//import authStore from '@/stores/index'
-import AuthForm from '@/components/AuthForm.vue'
+import { useAuthStore } from './stores/index'
 import SettingsComponent from '@/components/SettingsComponent'
 import HeaderComponent from '@/components/HeaderComponent'
 import NavigationComponent from '@/components/NavigationComponent'
 import FooterComponent from '@/components/FooterComponent'
+import ConfirmationComponent from '@/components/ConfirmationComponent'
 import initialData from '@/resources/initialData'
+import { storeToRefs } from 'pinia'
 
 export default {
   name: 'App',
   components: {
-    AuthForm,
+    ConfirmationComponent,
     SettingsComponent,
     HeaderComponent,
     NavigationComponent,
     FooterComponent
+  },
+  setup() {
+    const authStore = useAuthStore()
+
+    const { loggedIn } = storeToRefs(authStore)
+
+    return {
+      loggedIn
+    }
   },
   methods: {
     showPopup(prop) {
@@ -63,33 +64,15 @@ export default {
     hidePopup(prop, result) {
       this[prop].isShown = result
     },
-    async fetchData() {
-      const res = await fetch('http://localhost:5000/data')
-      const data = await res.json()
-
-      return data
+    handleConfirm(value) {
+      console.log(value)
     },
-    async auth(values) {
-      if (!values.username) {
-        console.log('sign in')
-        const { data } = await apiAuth.signIn(values)
-        localStorage.setItem('lectorium-jwt', data.token)
-
-      } else {
-        console.log('sign up')
-        const { data } = await apiAuth.signUp(values)
-        
-        if (data) {
-          this.$data.signUp.title = 'signed up'
-        }
-      }
-    }
   },
   data() {
     return initialData
   },
   created() {
-    this.$data.loggedIn = false
+    console.log(this.loggedIn)
   }
 
 }
