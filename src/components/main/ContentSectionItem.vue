@@ -36,11 +36,11 @@
 </script>
 
 <style scoped>
-  @import url('../styles/section-item/section-item.css');
-  @import url('../styles/section-item/section-item__image.css');
-	@import url('../styles/section-item/section-item__title.css');
-	@import url('../styles/section-item/section-item__text.css');
-	@import url('../styles/section-item/section-item__button-container.css');
-	@import url('../styles/section-item/section-item__tag-button.css');
-	@import url('../styles/section-item/section-item__expand-button.css');
+  @import url('@/styles/section-item/section-item.css');
+  @import url('@/styles/section-item/section-item__image.css');
+	@import url('@/styles/section-item/section-item__title.css');
+	@import url('@/styles/section-item/section-item__text.css');
+	@import url('@/styles/section-item/section-item__button-container.css');
+	@import url('@/styles/section-item/section-item__tag-button.css');
+	@import url('@/styles/section-item/section-item__expand-button.css');
 </style>>

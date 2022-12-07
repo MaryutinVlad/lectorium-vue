@@ -3,7 +3,7 @@
 		<div class="footer__logo-container">
 			<img
         class="footer__logo"
-				src="../images/logo.svg"
+				src="@/images/logo.svg"
 				alt="Lectorium" />
 			<h3 class="footer__logo-title">
 				Lectorium
@@ -74,11 +74,11 @@
 </script>
 
 <style scoped>
-  @import url('../styles/footer/footer.css');
-	@import url('../styles/footer/__logo-container/footer__logo-container.css');
-	@import url('../styles/footer/__logo-container/footer__logo.css');
-	@import url('../styles/footer/__logo-container/footer__logo-title.css');
-	@import url('../styles/footer/__links-section/footer__links-section.css');
-	@import url('../styles/footer/__links-section/footer__logo-copy.css');
-	@import url('../styles/footer/__socials-section/footer__socials-section.css');
+  @import url('@/styles/footer/footer.css');
+	@import url('@/styles/footer/__logo-container/footer__logo-container.css');
+	@import url('@/styles/footer/__logo-container/footer__logo.css');
+	@import url('@/styles/footer/__logo-container/footer__logo-title.css');
+	@import url('@/styles/footer/__links-section/footer__links-section.css');
+	@import url('@/styles/footer/__links-section/footer__logo-copy.css');
+	@import url('@/styles/footer/__socials-section/footer__socials-section.css');
 </style>

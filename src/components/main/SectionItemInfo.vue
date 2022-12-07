@@ -23,5 +23,5 @@
 </script>
 
 <style scoped>
-  @import url('../styles/section/section__item-info.css');
+  @import url('@/styles/section/section__item-info.css');
 </style>

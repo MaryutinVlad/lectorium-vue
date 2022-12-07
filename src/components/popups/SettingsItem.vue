@@ -41,9 +41,9 @@
 </script>
 
 <style scoped>
-  @import url('../styles/settings/settings__item-container.css');
-  @import url('../styles/settings/settings__input-field.css');
-  @import url('../styles/settings/settings__switch-bar.css');
-  @import url('../styles/settings/settings__switch-bar-pointer.css');
-  @import url('../styles/settings/settings__switch-bar-pointer_active.css');
+  @import url('@/styles/settings/settings__item-container.css');
+  @import url('@/styles/settings/settings__input-field.css');
+  @import url('@/styles/settings/settings__switch-bar.css');
+  @import url('@/styles/settings/settings__switch-bar-pointer.css');
+  @import url('@/styles/settings/settings__switch-bar-pointer_active.css');
 </style>

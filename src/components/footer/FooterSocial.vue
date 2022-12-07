@@ -16,5 +16,5 @@
 </script>
 
 <style scoped>
-  @import url('../styles/footer/__socials-section/footer__social-icon.css');
+  @import url('@/styles/footer/__socials-section/footer__social-icon.css');
 </style>

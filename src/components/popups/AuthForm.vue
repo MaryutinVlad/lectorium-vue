@@ -1,7 +1,7 @@
 <template>
   <div
     class="overlay"
-    @click="onClick"
+    @click.self="store.togglePopup(data.access)"
     >
     <form
       class="form"
@@ -47,29 +47,33 @@
 
 <script>
   import { apiAuth } from '@/helpers/apiAuth'
+  import { useStore } from '@/stores'
+  import authServices from '@/resources/authServices.json'
 
   export default {
     name: 'AuthForm',
     props: {
       data: Object,
     },
-    emits: [
-      'hide-form',
-      'auth-user'
-    ],
+    setup() {
+      const store = useStore()
+      return { store }
+    },
     methods: {
-      onClick(e) {
-        this.$emit('hide-form', this.data.access, e.target !== e.currentTarget)
-      },
       async submitForm() {
         if (!this.values.username) {
         console.log('sign in')
         const { data } = await apiAuth.signIn(this.values)
         localStorage.setItem('lectorium-jwt', data.token)
-        this.loggedIn = true;
+        //the futher code should be rewritten to async
+        this.store.loggedIn = true;
+        this.store.togglePopup(this.data.access)
       } else {
         console.log('sign up')
         const { data } = await apiAuth.signUp(this.values)
+        //the futher code should be rewritten to async
+        this.store.togglePopup(this.data.access)
+        this.store.togglePopup('signIn')
         console.log(data)
       }
       }
@@ -81,34 +85,21 @@
           password: '',
           username: ''
         },
-        services: [
-          {
-            title: 'Google',
-            src: 'Google_Authenticator_for_Android_icon.svg'
-          },
-          {
-            title: 'Apple',
-            src: 'apple-social-logo-outline_icon-icons.com_74064.svg'
-          },
-          {
-            title: 'Facebook',
-            src: 'fb_icon-icons.com_65434.svg'
-          }
-        ],
+        services: authServices
       }
     }
   }
 </script>
 
 <style scoped>
-  @import url('../styles/overlay/overlay.css');
-  @import url('../styles/overlay/overlay_hidden.css');
-  @import url('../styles/form/form.css');
-  @import url('../styles/form/form__title.css');
-	@import url('../styles/form/form__input-firld-container.css');
-  @import url('../styles/form/form__input-field.css');
-  @import url('../styles/form/form__fast-auth-container.css');
-  @import url('../styles/form/form__fast-auth-item.css');
-  @import url('../styles/form/form__fast-auth-image.css');
-  @import url('../styles/form/form__submit-button.css');
+  @import url('@/styles/overlay/overlay.css');
+  @import url('@/styles/overlay/overlay_hidden.css');
+  @import url('@/styles/form/form.css');
+  @import url('@/styles/form/form__title.css');
+	@import url('@/styles/form/form__input-firld-container.css');
+  @import url('@/styles/form/form__input-field.css');
+  @import url('@/styles/form/form__fast-auth-container.css');
+  @import url('@/styles/form/form__fast-auth-item.css');
+  @import url('@/styles/form/form__fast-auth-image.css');
+  @import url('@/styles/form/form__submit-button.css');
 </style>

@@ -28,7 +28,7 @@
 </script>
 
 <style scoped>
-  @import url('../styles/main/main__section.css');
-	@import url('../styles/main/main__section-title.css');
-	@import url('../styles/main/main__section-content-container.css');
+  @import url('@/styles/main/main__section.css');
+	@import url('@/styles/main/main__section-title.css');
+	@import url('@/styles/main/main__section-content-container.css');
 </style>

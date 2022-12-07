@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import AuthForm from '../components/AuthForm.vue'
+  import AuthForm from '@/components/popups/AuthForm.vue'
 
   export default {
     name: 'AuthRoute',

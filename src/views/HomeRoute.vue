@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import MainContent from '../components/MainContent'
+  import MainContent from '@/components//main/MainContent'
 
   export default {
     name: 'HomeRoute',

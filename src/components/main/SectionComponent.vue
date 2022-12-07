@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import SectionNavigationItem from './SectionNavigationItem'
+  import SectionNavigationItem from './navigation/SectionNavigationItem'
   import SectionItem from './SectionItem.vue'
 
   export default {
@@ -41,9 +41,9 @@
 </script>
 
 <style scoped>
-  @import url('../styles/section/section.css');
-  @import url('../styles/section/section__title.css');
-  @import url('../styles/section/section__container.css');
-  @import url('../styles/section/section__navigation.css');
-  @import url('../styles/section/section__content.css');
+  @import url('@/styles/section/section.css');
+  @import url('@/styles/section/section__title.css');
+  @import url('@/styles/section/section__container.css');
+  @import url('@/styles/section/section__navigation.css');
+  @import url('@/styles/section/section__content.css');
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div
     class="overlay"
-    @click="onClick"
+    @click.self="store.togglePopup(data.access)"
   >
     <div class="settings">
       <h3 class="settings__title">
@@ -26,6 +26,7 @@
 <script>
   import SettingsItem from './SettingsItem'
   import EditorComponent from './EditorComponent'
+  import { useStore } from '@/stores';
 
   export default {
     name: 'SettingsComponent',
@@ -36,20 +37,16 @@
       SettingsItem,
       EditorComponent
     },
-    emits: [
-      'hide-settings'
-    ],
-    methods: {
-      onClick(e) {
-        this.$emit('hide-settings', this.data.access, e.target !== e.currentTarget)
-      }
+    setup() {
+      const store = useStore()
+      return { store }
     }
   }
 </script>
 
 <style scoped>
-  @import url('../styles/settings/settings.css');
-  @import url('../styles/settings/settings__title.css');
-  @import url('../styles/settings/settings__upper-section.css');
-  @import url('../styles/settings/settings__lower-section.css');
+  @import url('@/styles/settings/settings.css');
+  @import url('@/styles/settings/settings__title.css');
+  @import url('@/styles/settings/settings__upper-section.css');
+  @import url('@/styles/settings/settings__lower-section.css');
 </style>

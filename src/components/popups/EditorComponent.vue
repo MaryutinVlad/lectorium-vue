@@ -25,8 +25,8 @@
 </script>
 
 <style scoped>
-  @import url('../styles/settings/settings__lower-section-title.css');
-  @import url('../styles/settings/settings__lower-section-container.css');
-  @import url('../styles/settings/settings__lower-section-container_type_model.css');
-  @import url('../styles/settings/settings__lower-section-container_type_list.css');
+  @import url('@/styles/settings/settings__lower-section-title.css');
+  @import url('@/styles/settings/settings__lower-section-container.css');
+  @import url('@/styles/settings/settings__lower-section-container_type_model.css');
+  @import url('@/styles/settings/settings__lower-section-container_type_list.css');
 </style>

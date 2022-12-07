@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import SectionComponent from '../components/SectionComponent'
+  import SectionComponent from '@/components/main/SectionComponent'
 
   export default {
     name: 'ClassesRoute',

@@ -17,5 +17,5 @@
 </script>
 
 <style>
-  @import url('../styles/section/section__navigation-link.css');
+  @import url('@/styles/section/section__navigation-link.css');
 </style>

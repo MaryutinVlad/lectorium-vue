@@ -1,23 +1,26 @@
 <template>
   <div class="page">
+    <AuthForm
+      :data="signIn"
+      v-show="popupShown.signIn"
+    />
+    <AuthForm
+      :data="signUp"
+      v-show="popupShown.signUp"
+    />
     <ConfirmationComponent
-      @confirm-action="handleConfirm"
-      @hide-popup="hidePopup"
-      v-show="confirm.isShown"
       :data="confirm"
+      v-show="popupShown.confirm"
     />
     <SettingsComponent
-      @hide-settings="hidePopup"
       :data="settings"
-      v-show="settings.isShown"
+      v-show="popupShown.settings"
     />
     <SettingsComponent
-      @hide-settings="hidePopup"
       :data="userSettings"
-      v-show="userSettings.isShown"
+      v-show="popupShown.userSettings"
     />
     <HeaderComponent
-      @show-form="showPopup"
       :loggedIn="loggedIn"
     />
     <NavigationComponent />
@@ -30,14 +33,16 @@
 </template>
 
 <script>
-import { useAuthStore } from './stores/index'
-import SettingsComponent from '@/components/SettingsComponent'
-import HeaderComponent from '@/components/HeaderComponent'
-import NavigationComponent from '@/components/NavigationComponent'
-import FooterComponent from '@/components/FooterComponent'
-import ConfirmationComponent from '@/components/ConfirmationComponent'
-import initialData from '@/resources/initialData'
 import { storeToRefs } from 'pinia'
+
+import { useStore } from './stores/index'
+import AuthForm from '@/components/popups/AuthForm'
+import SettingsComponent from '@/components/popups/SettingsComponent'
+import ConfirmationComponent from '@/components/popups/ConfirmationComponent'
+import HeaderComponent from '@/components/header/HeaderComponent'
+import NavigationComponent from '@/components/navigation/NavigationComponent'
+import FooterComponent from '@/components/footer/FooterComponent'
+import popupsData from '@/resources/popupsData.json'
 
 export default {
   name: 'App',
@@ -46,30 +51,26 @@ export default {
     SettingsComponent,
     HeaderComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    AuthForm
   },
   setup() {
-    const authStore = useAuthStore()
+    const authStore = useStore()
 
-    const { loggedIn } = storeToRefs(authStore)
+    const { loggedIn, popupShown } = storeToRefs(authStore)
 
     return {
-      loggedIn
+      loggedIn,
+      popupShown
     }
   },
   methods: {
-    showPopup(prop) {
-      this[prop].isShown = true
-    },
-    hidePopup(prop, result) {
-      this[prop].isShown = result
-    },
     handleConfirm(value) {
       console.log(value)
     },
   },
   data() {
-    return initialData
+    return popupsData
   },
   created() {
     console.log(this.loggedIn)
@@ -79,6 +80,6 @@ export default {
 </script>
 
 <style>
-  @import url('./styles/page/page.css');
-  @import url('./styles/main/main.css');
+  @import url('@/styles/page/page.css');
+  @import url('@/styles/main/main.css');
 </style>

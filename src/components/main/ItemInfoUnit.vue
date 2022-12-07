@@ -19,7 +19,7 @@
 </script>
 
 <style scoped>
-  @import url('../styles/infoUnit/infoUnit.css');
-  @import url('../styles/infoUnit/infoUnit__title.css');
-  @import url('../styles/infoUnit/infoUnit__value.css');
+  @import url('@/styles/infoUnit/infoUnit.css');
+  @import url('@/styles/infoUnit/infoUnit__title.css');
+  @import url('@/styles/infoUnit/infoUnit__value.css');
 </style>

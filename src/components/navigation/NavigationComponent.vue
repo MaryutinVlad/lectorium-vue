@@ -46,5 +46,5 @@
 </script>
 
 <style scoped>
-  @import url('../styles/navigation/navigation.css');
+  @import url('@/styles/navigation/navigation.css');
 </style>

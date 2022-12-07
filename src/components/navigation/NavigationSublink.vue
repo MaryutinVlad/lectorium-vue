@@ -19,5 +19,5 @@
 </script>
 
 <style scoped>
-  @import url('../styles/navigation/navigation__sublink.css');
+  @import url('@/styles/navigation/navigation__sublink.css');
 </style>

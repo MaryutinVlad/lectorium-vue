@@ -26,7 +26,7 @@
 </script>
 
 <style scoped>
-  @import url('../styles/navigation/navigation__link-container.css');
-  @import url('../styles/navigation/navigation__link.css');
-	@import url('../styles/navigation/navigation__sublink-container.css');
+  @import url('@/styles/navigation/navigation__link-container.css');
+  @import url('@/styles/navigation/navigation__link.css');
+	@import url('@/styles/navigation/navigation__sublink-container.css');
 </style>

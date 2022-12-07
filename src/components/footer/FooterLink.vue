@@ -17,5 +17,5 @@
 </script>
 
 <style scoped>
-  @import url('../styles/footer/__links-section/footer__link.css');
+  @import url('@/styles/footer/__links-section/footer__link.css');
 </style>

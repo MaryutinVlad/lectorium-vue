@@ -34,9 +34,9 @@
 </script>
 
 <style scoped>
-  @import url('../styles/section/section__item.css');
-  @import url('../styles/section/section__item-description.css');
-  @import url('../styles/section/section__item-title.css');
-  @import url('../styles/section/section__item-text.css');
-  @import url('../styles/section/section__item-image.css');
+  @import url('@/styles/section/section__item.css');
+  @import url('@/styles/section/section__item-description.css');
+  @import url('@/styles/section/section__item-title.css');
+  @import url('@/styles/section/section__item-text.css');
+  @import url('@/styles/section/section__item-image.css');
 </style>
