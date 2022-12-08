@@ -1,7 +1,7 @@
 .settings__input-field {
   box-sizing: border-box;
   padding: 0 1px;
-  border: 1px solid #8B8282;
+  border: 1px solid hsl(0, 4%, 53%);
   border-radius: 90px;
   font-size: 24px;
   font-weight: 200;
@@ -9,8 +9,19 @@
   letter-spacing: 0.1em;
   cursor: pointer;
   text-align: center;
+  outline: none;
+}
+
+.settings__input-field::-webkit-outer-spin-button,
+.settings__input-field::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
 }
 
 .settings__input-field:hover {
-  background-color: #FEFEFA;
+  background-color: hsl(0, 7%, 97%);
 }

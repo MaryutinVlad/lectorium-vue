@@ -62,14 +62,12 @@
     methods: {
       async submitForm() {
         if (!this.values.username) {
-        console.log('sign in')
         const { data } = await apiAuth.signIn(this.values)
         localStorage.setItem('lectorium-jwt', data.token)
         //the futher code should be rewritten to async
         this.store.loggedIn = true;
         this.store.togglePopup(this.data.access)
       } else {
-        console.log('sign up')
         const { data } = await apiAuth.signUp(this.values)
         //the futher code should be rewritten to async
         this.store.togglePopup(this.data.access)

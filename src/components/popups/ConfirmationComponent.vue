@@ -52,5 +52,6 @@
   @import url('@/styles/overlay/overlay_hidden.css');
   @import url('@/styles/form/form.css');
   @import url('@/styles/form/form__title.css');
+  @import url('@/styles/form/form__description.css');
   @import url('@/styles/form/form__submit-button.css');
 </style>

@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeRoute from '@/views/HomeRoute'
-import AuthRoute from '@/views/AuthRoute'
 import ClassesRoute from '@/views/ClassesRoute'
+import ClassesTagRoute from '@/views/ClassesTagRoute'
 import CoursesRoute from '@/views/CoursesRoute'
 import LectionsRoute from '@/views/LectionsRoute'
 import CommunitiesRoute from '@/views/CommunitiesRoute'
@@ -14,19 +14,16 @@ const routes = [
     component: HomeRoute
   },
   {
-    path: '/auth/:option',
-    name: 'Auth',
-    component: AuthRoute
-  },
-  {
     path: '/classes',
     name: 'classes',
-    component: ClassesRoute
-  },
-  {
-    path: '/classes/:tag',
-    name: 'classTag',
-    component: ClassesRoute
+    component: ClassesRoute,
+    children: [
+      {
+        name: 'classesTag',
+        path: ':id',
+        component: ClassesTagRoute
+      }
+    ]
   },
   {
     path: '/courses',

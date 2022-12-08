@@ -1,4 +1,6 @@
 .settings__switch-bar-pointer_active {
-  transition: margin 200ms linear;
+  transition-property: margin;
+  transition-duration: 200ms;
+  transition-timing-function: linear;
   margin: 1px 2px 1px 41px;
 }

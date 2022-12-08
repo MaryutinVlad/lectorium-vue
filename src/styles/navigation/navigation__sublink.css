@@ -1,5 +1,5 @@
 .navigation__sublink {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 200;
     line-height: 22.2px;
     text-decoration-thickness: .5px;
@@ -8,6 +8,5 @@
 }
 
 .navigation__sublink:hover {
-    background: radial-gradient(circle at 0%, transparent 10%, rgba(210, 17, 17, .4) 50%, transparent 90%);
-    font-style: italic;
+    background: radial-gradient(circle at 0%, transparent 10%, hsla(0, 60%, 93%, 0.7) 50%, transparent 90%);
 }

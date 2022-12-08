@@ -3,7 +3,7 @@
     "title": "title 1",
     "text": "test text 1",
     "image": "test1.png",
-    "tag": "math",
+    "tag": "/classes/math",
     "info": [
       {
         "title": "Length",
@@ -27,7 +27,7 @@
     "title": "title 2",
     "text": "test text 2",
     "image": "test1.png",
-    "tag": "math",
+    "tag": "/classes/math",
     "info": [
       {
         "title": "Length",
@@ -51,7 +51,7 @@
     "title": "title 3",
     "text": "test text 3",
     "image": "test1.png",
-    "tag": "planning",
+    "tag": "/classes/planning",
     "info": [
       {
         "title": "Length",

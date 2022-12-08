@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <h2 class="section__title">
-      {{title}}
+      {{$route.path}}
     </h2>
     <div class="section__container">
       <nav class="section__navigation">
@@ -29,7 +29,6 @@
   export default {
     name: 'SectionComponent',
     props: {
-      title: String,
       items: Array,
       links: Array
     },

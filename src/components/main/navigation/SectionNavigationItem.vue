@@ -1,10 +1,10 @@
 <template>
   <router-link
     class="section__navigation-link"
-    :to="{ name: 'classTag', params: { tag: data.title.toLowerCase()}}"
+    :to="{ name: 'classesTag', params: { id: data.title.toLowerCase()}}"
   >
     {{data.title}}
-  </router-link>  
+  </router-link>
 </template>
 
 <script>

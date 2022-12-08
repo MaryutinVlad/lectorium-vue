@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 15px 30px 25px;
   color: #504949;
-  background-color: #FEFEFA;
-  border: 1px solid #7A6E6E;
+  background-color: hsl(60, 67%, 99%);
+  border: 1px solid hsl(0, 5%, 45%);
   border-radius: 30px;
 }
