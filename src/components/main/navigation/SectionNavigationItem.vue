@@ -1,9 +1,9 @@
 <template>
   <router-link
     class="section__navigation-link"
-    :to="{ name: 'classesTag', params: { id: data.title.toLowerCase()}}"
+    :to="{ name: 'sectionTag', params: { tag: data}}"
   >
-    {{data.title}}
+    {{data}}
   </router-link>
 </template>
 
@@ -11,7 +11,7 @@
   export default {
     name: 'SectionNavigationItem',
     props: {
-      data: Object
+      data: String
     }
   }
 </script>

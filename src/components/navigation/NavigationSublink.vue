@@ -1,19 +1,19 @@
 <template>
-	<a
-    href="#"
+	<router-link
+    :to="{ name: 'sectionTag', params: { section: data.title ,tag: sublink}}"
     class="navigation__sublink"
-    v-for="sublink in sublinks"
+    v-for="sublink in data.sublinks"
     :key="sublink"
   >
     {{sublink}}
-	</a>
+  </router-link>
 </template>
 
 <script>
   export default {
     name: 'NavigationSublink',
     props: {
-      sublinks: Array
+      data: Object
     }
   }
 </script>

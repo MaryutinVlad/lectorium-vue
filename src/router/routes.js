@@ -1,11 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeRoute from '@/views/HomeRoute'
-import ClassesRoute from '@/views/ClassesRoute'
-import ClassesTagRoute from '@/views/ClassesTagRoute'
-import CoursesRoute from '@/views/CoursesRoute'
-import LectionsRoute from '@/views/LectionsRoute'
-import CommunitiesRoute from '@/views/CommunitiesRoute'
+import SectionRoute from '@/views/SectionRoute'
+import SectionTagRoute from '@/views/SectionTagRoute'
 
 const routes = [
   {
@@ -14,32 +11,17 @@ const routes = [
     component: HomeRoute
   },
   {
-    path: '/classes',
-    name: 'classes',
-    component: ClassesRoute,
+    name: 'section',
+    path: '/:section',
+    component: SectionRoute,
     children: [
       {
-        name: 'classesTag',
-        path: ':id',
-        component: ClassesTagRoute
+        name: 'sectionTag',
+        path: ':tag',
+        component: SectionTagRoute
       }
     ]
-  },
-  {
-    path: '/courses',
-    name: 'courses',
-    component: CoursesRoute
-  },
-  {
-    path: '/lections',
-    name: 'lections',
-    component: LectionsRoute
-  },
-  {
-    path: '/communities',
-    name: 'communities',
-    component: CommunitiesRoute
-  },
+  }
 ]
 
 const router = createRouter({

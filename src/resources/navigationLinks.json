@@ -1,0 +1,18 @@
+[
+  {
+    "title": "classes",
+    "sublinks": ["math", "planning", "writing", "speed reading"]
+  },
+  {
+    "title": "courses",
+    "sublinks": ["full course", "term course", "short course"]
+  },
+  {
+    "title": "lections",
+    "sublinks": ["public", "conversations", "free conten", "start lection"]
+  },
+  {
+    "title": "communities",
+    "sublinks": ["featured", "create", "by themes", "by country"]
+  }
+]  

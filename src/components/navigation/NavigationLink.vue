@@ -1,11 +1,13 @@
 <template>
 	<div class="navigation__link-container">
-    <router-link class="navigation__link" :to="data.route">
+    <router-link
+      class="navigation__link"
+      :to="{ name: 'section', params: { section: data.title }}">
       {{data.title}}
     </router-link>
     <div class="navigation__sublink-container">
 			<NavigationLSublink
-        :sublinks="data.sublinks"
+        :data="data"
       />
     </div>
 	</div>

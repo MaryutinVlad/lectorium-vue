@@ -1,11 +1,11 @@
 {
   "items":[
     {
-      "key": "clas1",
-      "title": "title 1",
+      "key": "com1",
+      "title": "com 1",
       "text": "test text 1",
-      "image": "test1.png",
-      "tag": "math",
+      "image": "test2.png",
+      "tag": "langs",
       "info": [
         {
           "title": "Length",
@@ -26,11 +26,11 @@
       ]
     },
     {
-      "key": "clas2",
-      "title": "title 2",
+      "key": "com2",
+      "title": "com 2",
       "text": "test text 2",
-      "image": "test1.png",
-      "tag": "math",
+      "image": "test2.png",
+      "tag": "music",
       "info": [
         {
           "title": "Length",
@@ -51,11 +51,11 @@
       ]
     },
     {
-      "key": "clas3",
-      "title": "title 3",
+      "key": "com3",
+      "title": "com 3",
       "text": "test text 3",
-      "image": "test1.png",
-      "tag": "planning",
+      "image": "test2.png",
+      "tag": "physics",
       "info": [
         {
           "title": "Length",
@@ -76,5 +76,5 @@
       ]
     }
   ],
-  "tags": [ "math", "planning" ]
+  "tags": [ "langs", "music", "physics" ]
 }

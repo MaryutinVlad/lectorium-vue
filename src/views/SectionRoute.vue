@@ -6,12 +6,18 @@
     <div class="section__container">
       <nav class="section__navigation">
         <SectionNavigationItem
-          v-for="link in links"
-          :key="link.title"
-          :data="link"
+          v-for="tag in tags"
+          :key="tag"
+          :data="tag"
         />
       </nav>
       <div class="section__content">
+        <SectionItem
+          v-show="!$route.params.tag"
+          v-for="item in items"
+          :key="item.title"
+          :data="item"
+        />
         <router-view />
       </div>
     </div>
@@ -20,15 +26,25 @@
 
 <script>
   import SectionNavigationItem from '@/components/main/navigation/SectionNavigationItem';
+  import SectionItem from '@/components/main/SectionItem.vue'
 
   export default {
-    name: 'ClassesRoute',
+    name: 'SectionRoute',
     components: {
-      SectionNavigationItem
+      SectionNavigationItem,
+      SectionItem
     },
     data() {
       return {
-        links: require(`../resources/classesLinks.json`)
+        items: require(`../resources/${this.$route.params.section}Items.json`).items,
+        tags: require(`../resources/${this.$route.params.section}Items.json`).tags
+      }
+    },
+    watch: {
+      $route() {
+        this.items = require(`../resources/${this.$route.params.section}Items.json`).items,
+        this.tags = require(`../resources/${this.$route.params.section}Items.json`).tags
+        console.log(this.$route)
       }
     }
   }

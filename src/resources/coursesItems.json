@@ -1,11 +1,11 @@
 {
   "items":[
     {
-      "key": "clas1",
-      "title": "title 1",
+      "key": "course1",
+      "title": "course 1",
       "text": "test text 1",
-      "image": "test1.png",
-      "tag": "math",
+      "image": "test3.png",
+      "tag": "logic",
       "info": [
         {
           "title": "Length",
@@ -26,11 +26,11 @@
       ]
     },
     {
-      "key": "clas2",
-      "title": "title 2",
+      "key": "course2",
+      "title": "course 2",
       "text": "test text 2",
-      "image": "test1.png",
-      "tag": "math",
+      "image": "test3.png",
+      "tag": "logic",
       "info": [
         {
           "title": "Length",
@@ -51,11 +51,11 @@
       ]
     },
     {
-      "key": "clas3",
-      "title": "title 3",
+      "key": "course3",
+      "title": "course 3",
       "text": "test text 3",
-      "image": "test1.png",
-      "tag": "planning",
+      "image": "test3.png",
+      "tag": "security",
       "info": [
         {
           "title": "Length",
@@ -76,5 +76,5 @@
       ]
     }
   ],
-  "tags": [ "math", "planning" ]
+  "tags": [ "logic", "security" ]
 }

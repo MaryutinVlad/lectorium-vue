@@ -10,6 +10,7 @@
 
 <script>
   import NavigationLink from './NavigationLink';
+  import navigationLinks from '@/resources/navigationLinks.json'
 
   export default {
     name: 'NavigationComponent',
@@ -18,28 +19,7 @@
     },
     data() {
       return {
-        links: [
-          {
-            title: 'classes',
-            route: '/classes',
-            sublinks: ['math', 'langs', 'writing', 'speed reading']
-          },
-          {
-            title: 'courses',
-            route: '/courses',
-            sublinks: ['full course', 'term course', 'short course']
-          },
-          {
-            title: 'lections',
-            route: '/lections',
-            sublinks: ['public', 'conversations', 'free conten', 'start lection']
-          },
-          {
-            title: 'communities',
-            route: '/communities',
-            sublinks: ['featured', 'create', 'by themes', 'by country']
-          }
-        ]
+        links: navigationLinks
       }
     }
   }
