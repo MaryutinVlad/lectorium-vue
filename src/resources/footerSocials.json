@@ -1,0 +1,29 @@
+{
+  "socials": [
+    {
+      "title": "Twitter",
+      "src": "twitter.png",
+      "href": "#"
+    },
+    {
+      "title": "Instagram",
+      "src": "instagram.png",
+      "href": "#"
+    },
+    {
+      "title": "Telegram",
+      "src": "telegram.png",
+      "href": "#"
+    }
+  ],
+  "links": [
+    {
+      "title": "Privacy policy",
+      "href": "#"
+    },
+    {
+      "title": "Community participation guidelines",
+      "href": "#"
+    }
+  ]
+}

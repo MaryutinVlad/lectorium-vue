@@ -10,3 +10,7 @@
 .navigation__link-container:hover {
     background-color: #F5F5F5;
 }
+
+.navigation__link-container:hover .navigation__link {
+    text-decoration: none;
+}

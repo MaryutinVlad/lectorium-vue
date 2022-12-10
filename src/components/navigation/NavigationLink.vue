@@ -2,12 +2,13 @@
 	<div class="navigation__link-container">
     <router-link
       class="navigation__link"
-      :to="{ name: 'section', params: { section: data.title }}">
-      {{data.title}}
+      :to="{ name: 'section', params: { section: title }}">
+      {{title}}
     </router-link>
     <div class="navigation__sublink-container">
 			<NavigationLSublink
-        :data="data"
+        :sublinks="sublinks"
+        :section="title"
       />
     </div>
 	</div>
@@ -19,10 +20,15 @@
   export default {
     name: 'NavigationLink',
 		props: {
-			data: Object
+			title: String
 		},
     components: {
       NavigationLSublink
+    },
+    data() {
+      return {
+        sublinks: require(`@/resources/${this.title}Items.json`).tags
+      }
     }
   }
 </script>

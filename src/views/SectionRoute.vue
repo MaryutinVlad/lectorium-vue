@@ -1,7 +1,8 @@
 <template>
   <section class="section">
     <h2 class="section__title">
-      {{$route.path}}
+      {{$route.params.section}}:
+      {{$route.params.tag ? $route.params.tag : ''}}
     </h2>
     <div class="section__container">
       <nav class="section__navigation">
@@ -44,7 +45,6 @@
       $route() {
         this.items = require(`../resources/${this.$route.params.section}Items.json`).items,
         this.tags = require(`../resources/${this.$route.params.section}Items.json`).tags
-        console.log(this.$route)
       }
     }
   }

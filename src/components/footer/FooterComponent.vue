@@ -4,7 +4,9 @@
 			<img
         class="footer__logo"
 				src="@/images/logo.svg"
-				alt="Lectorium" />
+				alt="Lectorium"
+				@click="toTop"
+			/>
 			<h3 class="footer__logo-title">
 				Lectorium
 			</h3>
@@ -32,6 +34,7 @@
 <script>
   import FooterLink from './FooterLink'
   import FooterSocial from './FooterSocial'
+	import footerSocials from '@/resources/footerSocials.json'
 
   export default {
 		name: 'FooterComponent',
@@ -39,35 +42,15 @@
 			FooterLink,
 			FooterSocial
 		},
+		methods: {
+			toTop() {
+				window.scrollTo(0, 0)
+			}
+		},
 		data() {
 			return {
-				socials: [
-					{
-						title: 'Twitter',
-						src: 'twitter.png',
-						href: '#'
-					},
-					{
-						title: 'Instagram',
-						src: 'instagram.png',
-						href: '#'
-					},
-					{
-						title: 'Telegram',
-						src: 'telegram.png',
-						href: '#'
-					}
-				],
-				links: [
-					{
-						title: 'Privacy policy',
-						href: '#'
-					},
-					{
-						title: 'Community participation guidelines',
-						href: '#'
-					}
-				]
+				socials: footerSocials.socials,
+				links: footerSocials.links
 			}
 		}
 	}

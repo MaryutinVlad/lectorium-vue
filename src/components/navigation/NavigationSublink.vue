@@ -1,8 +1,8 @@
 <template>
 	<router-link
-    :to="{ name: 'sectionTag', params: { section: data.title ,tag: sublink}}"
+    :to="{ name: 'sectionTag', params: { section: section, tag: sublink}}"
     class="navigation__sublink"
-    v-for="sublink in data.sublinks"
+    v-for="sublink in sublinks"
     :key="sublink"
   >
     {{sublink}}
@@ -13,7 +13,8 @@
   export default {
     name: 'NavigationSublink',
     props: {
-      data: Object
+      sublinks: Array,
+      section: String
     }
   }
 </script>

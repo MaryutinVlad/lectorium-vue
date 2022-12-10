@@ -23,7 +23,7 @@
     watch: {
       $route() {
         this.items = require(`@/resources/${this.$route.params.section}Items.json`).items
-          .filter(item => item.tag === this.$route.params.tag)
+          .filter(item => item.tag === this.$route.params.tag)  
       }
     }
   }

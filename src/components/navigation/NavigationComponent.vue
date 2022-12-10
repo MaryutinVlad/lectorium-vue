@@ -2,8 +2,8 @@
   <nav class="navigation">
     <NavigationLink
       v-for="link in links"
-      :key="link.title"
-      :data="link"
+      :key="link"
+      :title="link"
     />
   </nav>
 </template>
