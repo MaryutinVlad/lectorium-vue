@@ -2,4 +2,6 @@
   font-size: 25px;
   line-height: 29px;
   margin: 0 0 0 30px;
+  text-decoration: none;
+  color: hsl(240, 19%, 20%);
 }

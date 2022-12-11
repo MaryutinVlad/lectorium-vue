@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeRoute from '@/views/HomeRoute'
 import SectionRoute from '@/views/SectionRoute'
 import SectionTagRoute from '@/views/SectionTagRoute'
+import ArticleRoute from '@/views/ArticleRoute'
 
 const routes = [
   {
@@ -18,7 +19,14 @@ const routes = [
       {
         name: 'sectionTag',
         path: ':tag',
-        component: SectionTagRoute
+        component: SectionTagRoute,
+        children: [
+          {
+            name: 'article',
+            path: ':id',
+            component: ArticleRoute
+          }
+        ]
       }
     ]
   }

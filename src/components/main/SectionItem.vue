@@ -1,9 +1,12 @@
 <template>
   <article class="section__item">
     <div class="section__item-description">
-      <h3 class="section__item-title">
+      <router-link
+        class="section__item-title"
+        :to="{ name: 'article', params: { id: data.title }}"
+      >
         {{data.title}}
-      </h3>
+      </router-link>
       <p class="section__item-text">
         {{data.text}}
       </p>
